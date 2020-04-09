@@ -18,6 +18,30 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-emotion',
+    {
+      resolve:'gatsby-plugin-create-client-paths',
+      options:{
+        prefixes:[`/app/*`]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options:{
+        name: `Mi primer sito con Gatsby`,
+        short_name: `MPSCG`,
+        start_url:`/`,
+        background_color:`#262B34`,
+        theme_color: `#EC6ECE`,
+        display:`standalone`,
+        icon:`src/images/icons/doctor-icon.png`
+      }
+    },
+    {
+      resolve:'gatsby-plugin-offline',
+      options:{
+        precachePage:['/about']
+      }
+    }
 
   ]
 }

@@ -1,3 +1,6 @@
 import './src/styles/global.css';
 import Layout from './src/components/layout';
-export const wrapRootElement =  Layout;
+import React from 'react';
+export const wrapPageElement = ({element, props})=>{
+    return <Layout {...props}> {element} </Layout>
+};

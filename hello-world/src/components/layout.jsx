@@ -5,9 +5,9 @@ export default(props)=>{
 
     return(
         <div>
-            
+             <Navigation/>
             {props.children}
-            <Navigation/>
+           
         </div>
     );
 }
